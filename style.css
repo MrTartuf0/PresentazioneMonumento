@@ -1,24 +1,122 @@
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans&family=Press+Start+2P&family=Roboto:wght@400;500;700;900&display=swap');
 
-:root{
-    --title:100px;
-}
-h1{
-    font-size: var(--title);
-}
-
 *{
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
 }
-body{
-    display: flex;
-    justify-content: center;
-    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+
+:root{
+    --lightGrey:#F3F3F3; 
 }
-.content{
+
+
+nav{
+    display: flex;
+    background: #b1ceb4;
+    color: white;
+    width: 100%;
+    justify-content: center;
+    border-radius: 20px;
+    font-size: var(--titolo);
+}
+
+.big{
+    color:#519259;
+    font-size: var(--bigTitle);
+    display: inline-block;
+    font-size: var(--titoloGrande);
+    font-weight: 900;
+}
+
+
+body{
     display: flex;
     align-items: center;
     flex-direction: column;
+    font-family: 'Roboto',Arial, Helvetica, sans-serif;
+    background-color: var(--lightGrey);
+}
+.content{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: min(900px,95%);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px 0px lightgrey;
+}
+
+
+h2{
+    font-size: var(--tParagrafo);
+    padding: 30px 10% 20px 10%;
+    color: #064635;
+}
+
+.margin{
+    margin: 0px 10% 0px 10%;
+}
+
+
+
+p{
+    font-size: var(--testo);
+    padding: 5%;
+}
+
+.flexCont1{
+    margin-bottom: 50px;    
+}
+
+
+.flexCont3{
+    margin-bottom: 30px;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+
+
+
+img{
+    transition: 0.8s;
+}
+img:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 0px) {
+    :root{
+        --titoloGrande:50px;
+        --titolo:25px;
+        --tParagrafo:40px;
+        --testo:30px;
+    }
+
+}
+@media screen and (min-width: 800px) {
+    :root{
+        --titoloGrande:100px;
+        --titolo:50px;
+        --tParagrafo:50px;
+        --testo:30px;
+    }
+    .flexCont1{
+        display: flex;
+    }
+    .sx1{
+        width: 50%;
+        
+    }
+    .dx1{
+        width: 50%;
+    }
+
+  
+
+
 }
